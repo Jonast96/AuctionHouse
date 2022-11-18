@@ -4,7 +4,8 @@
   "description": "The client has specified the following requirements in the form of User Stories:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "Sass scss:assets/css",
+    "watch": "sass --watch scss:assets/css"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,11 @@
   },
   "homepage": "https://github.com/Jonast96/new_auction_site#readme",
   "dependencies": {
-    "bootstrap": "^5.2.2"
+    "autoprefixer": "^10.4.13",
+    "bootstrap": "^5.2.2",
+    "postcss-cli": "^10.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1"
   }
 }

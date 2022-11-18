@@ -1,0 +1,12 @@
+@import "custom";
+
+.landing_page {
+  .img_container {
+    height: 400px;
+  }
+  .image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
