@@ -30,13 +30,13 @@ The client has specified the following requirements in the form of User Stories:
 
 # The company CTO has set the following technical restrictions:
 
-- [ ] Must use an approved CSS Framework
+- [x] ~~_Must use an approved CSS Framework_~~ [2022-11-21]
 
-- [ ] Must be hosted on an approved Static Host
+- [x] ~~_Must be hosted on an approved Static Host_~~ [2022-11-21]
 
-- [ ] Must use an approved Design Application
+- [x] ~~_Must use an approved Design Application_~~ [2022-11-21]
 
-- [ ] Must use an approved Planning Application
+- [x] ~~_Must use an approved Planning Application_~~ [2022-11-21]
 
 # The Product Owner has requested links to the following:
 
