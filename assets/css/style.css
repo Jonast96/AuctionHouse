@@ -10795,7 +10795,6 @@ textarea.form-control-lg {
 }
 .index_main .deals_container {
   min-height: 60vh;
-  background-color: rgb(53, 53, 53);
 }
 .index_main .img_all_container {
   width: 100%;
@@ -10808,6 +10807,22 @@ textarea.form-control-lg {
 }
 
 .register {
+  min-height: 100vh;
+}
+.register .register_container {
+  max-height: 200px;
+}
+.register .img_container {
+  width: 100%;
+  height: 200px;
+}
+.register .img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.login .header {
   min-height: 100vh;
 }
 
