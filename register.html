@@ -95,65 +95,111 @@
                         Sign up
                       </p>
 
-                      <form class="mx-1 mx-md-4">
-                        <div class="d-flex flex-row align-items-center mb-4">
+                      <form class="mx-1 mx-md-4" id="form">
+                        <div class="d-flex flex-row align-items-center">
                           <div class="form-floating flex-fill mb-2">
                             <input
                               type="name"
-                              class="form-control"
-                              id="floatingInput"
+                              class="form-control border name_input"
                               placeholder="Name"
+                              id="name"
+                              required
+                              pattern="^[a-zA-Z0-9_]+$"
                             />
+
                             <label for="floatingInput">Name</label>
                           </div>
                         </div>
 
-                        <div class="d-flex flex-row align-items-center mb-4">
+                        <div class="d-flex flex-row align-items-center">
                           <div class="form-floating flex-fill mb-2">
                             <input
                               type="email"
-                              id="form3Example3c"
-                              class="form-control"
+                              class="form-control email_input"
                               placeholder="Email"
+                              id="email"
+                              required
+                              pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                             />
+                            <div class="invalid_email text-danger d-none">
+                              The email value must be a valid stud.noroff.no or
+                              noroff.no email address.
+                            </div>
                             <label class="form-label" for="form3Example3c"
                               >Your Email</label
                             >
                           </div>
                         </div>
 
-                        <div class="d-flex flex-row align-items-center mb-4">
-                          <div class="form-floating flex-fill mb-0">
+                        <div class="d-flex flex-row align-items-center">
+                          <div class="form-floating flex-fill mb-2">
                             <input
                               type="password"
-                              id="form3Example4c"
-                              class="form-control"
+                              class="form-control password_input"
                               placeholder="Password"
+                              id="password"
+                              required
+                              minlength="8"
                             />
+                            <div class="invalid_password text-danger d-none">
+                              The password value must be at least 8 characters.
+                            </div>
                             <label class="form-label" for="form3Example4c"
                               >Password</label
                             >
                           </div>
                         </div>
 
-                        <div class="d-flex flex-row align-items-center mb-4">
-                          <div class="form-floating flex-fill mb-0">
+                        <div class="d-flex flex-row align-items-center">
+                          <div class="form-floating flex-fill mb-2">
                             <input
                               type="password"
-                              id="form3Example4cd"
-                              class="form-control"
+                              class="form-control repeat_password_input"
                               placeholder="Repeat password"
+                              id="repeat_password"
                             />
+                            <div
+                              class="invalid_repeat_password text-danger d-none"
+                            >
+                              The passwords value must match.
+                            </div>
                             <label class="form-label" for="form3Example4cd"
                               >Repeat your password</label
                             >
                           </div>
                         </div>
+                        <div class="d-flex flex-row align-items-center">
+                          <div class="form-floating flex-fill mb-2">
+                            <input
+                              type="avatar"
+                              class="form-control"
+                              placeholder="avatar"
+                              id="avatar"
+                            />
+                            <label class="form-label" for="form3Example4cd"
+                              >Avatar</label
+                            >
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center">
+                          <div class="form-floating flex-fill mb-2">
+                            <input
+                              type="banner"
+                              class="form-control"
+                              placeholder="banner"
+                              id="banner"
+                            />
+                            <label class="form-label" for="form3Example4cd"
+                              >Banner</label
+                            >
+                          </div>
+                        </div>
+                        <div class="text-danger response_error"></div>
 
                         <div
                           class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"
                         >
-                          <button type="button" class="btn btn-info btn-lg">
+                          <button type="submit" class="btn btn-info btn-lg">
                             Register
                           </button>
                         </div>
@@ -163,7 +209,7 @@
                       class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
                     >
                       <img
-                        src="/images/hasbuuuuuuuuuulla.jpg"
+                        src="/images/logo.jpg"
                         class="img-fluid"
                         alt="Sample image"
                       />
@@ -238,6 +284,7 @@
         </ul>
       </div>
     </footer>
+    <script type="module" src="/js/register/register.mjs"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
