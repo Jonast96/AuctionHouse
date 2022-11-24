@@ -6,7 +6,7 @@
 
 The client has specified the following requirements in the form of User Stories:
 
-- [ ] A user with a stud.noroff.no email may register
+- [x] ~~_A user with a stud.noroff.no email may register_~~ [2022-11-24]
 
 - [ ] A registered user may login
 
