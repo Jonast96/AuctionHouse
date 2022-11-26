@@ -8,7 +8,7 @@ The client has specified the following requirements in the form of User Stories:
 
 - [x] ~~_A user with a stud.noroff.no email may register_~~ [2022-11-24]
 
-- [ ] A registered user may login
+- [x] ~~_A registered user may login_~~ [2022-11-25]
 
 - [ ] A registered user may logout
 
@@ -30,7 +30,7 @@ The client has specified the following requirements in the form of User Stories:
 
 # The company CTO has set the following technical restrictions:
 
-- [x] ~~_Must use an approved CSS Framework_~~ [2022-11-21]
+- [x] ~~_*Must use an approved CSS Framework*_~~ [2022-11-25]
 
 - [x] ~~_Must be hosted on an approved Static Host_~~ [2022-11-21]
 
@@ -40,13 +40,13 @@ The client has specified the following requirements in the form of User Stories:
 
 # The Product Owner has requested links to the following:
 
-- [ ] A Gantt chart for project timing
+- [x] ~~_A Gantt chart for project timing_~~ [2022-11-25]
 
-- [ ] A design prototype
+- [x] ~~_A design prototype_~~ [2022-11-25]
 
-- [ ] A style guide
+- [x] ~~_A style guide_~~ [2022-11-25]
 
-- [ ] A kanban project board
+- [x] ~~_A kanban project board_~~ [2022-11-25]
 
 - [ ] A repository link
 

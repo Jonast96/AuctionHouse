@@ -36,15 +36,12 @@ loginForm.addEventListener("submit", async (e) => {
         const json = await response.json()
         sendUserDataToLocalStorage(json)
         if (response.ok === true) {
-            //Send user to profile
-            console.log("logged in successfully")
+            window.location = "profile.html"
             errorMessage.classList.add("d-none")
         } else {
             errorMessage.classList.remove("d-none")
             errorMessage.innerHTML = `${json.errors[0].message}`
         }
-
-
     } catch (error) {
         console.log(error)
     }
