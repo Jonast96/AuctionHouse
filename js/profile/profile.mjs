@@ -1,3 +1,4 @@
+
 const userName = document.querySelector(".username")
 const credits = document.querySelector(".current_credits")
 const auctions = document.querySelector(".current_auctions")
