@@ -1,21 +1,20 @@
+import { sendUserDataToLocalStorage } from "./login_utils.mjs"
+import {
+    baseUrl,
+    logOutFunctions
+
+} from "../utils.mjs"
+
+logOutFunctions()
+
 const emailInput = document.querySelector(".email_input")
 const passwordInput = document.querySelector(".password_input")
 const loginForm = document.querySelector(".login_form")
 
 const errorMessage = document.querySelector(".error_message")
 
-const baseUrl = "https://nf-api.onrender.com"
 const loginUrl = `${baseUrl}/api/v1/auction/auth/login`
 
-function sendUserDataToLocalStorage(x) {
-    const userToken = x.accessToken;
-    const userName = x.name;
-    const userEmail = x.email
-
-    localStorage.setItem('userToken', userToken)
-    localStorage.setItem('userName', userName)
-    localStorage.setItem('userEmail', userEmail)
-}
 
 loginForm.addEventListener("submit", async (e) => {
     try {

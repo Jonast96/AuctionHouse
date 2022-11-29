@@ -1,3 +1,12 @@
+import {
+    logOutFunctions,
+    redirectIfNotLoggedIn
+
+} from "../utils.mjs"
+
+
+
+logOutFunctions()
 
 const userName = document.querySelector(".username")
 const credits = document.querySelector(".current_credits")
@@ -7,6 +16,9 @@ const userToken = localStorage.getItem("userToken")
 const localStorageUserName = localStorage.getItem("userName")
 const baseUrl = "https://nf-api.onrender.com"
 const profileUrl = `${baseUrl}/api/v1/auction/profiles/${localStorageUserName}?_listings=true`
+
+
+redirectIfNotLoggedIn(userToken)
 
 
 async function getUser() {

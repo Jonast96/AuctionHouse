@@ -10,7 +10,7 @@ The client has specified the following requirements in the form of User Stories:
 
 - [x] ~~_A registered user may login_~~ [2022-11-25]
 
-- [ ] A registered user may logout
+- [x] ~~_A registered user may logout_~~ [2022-11-29]
 
 - [ ] A registered user may update their avatar
 
