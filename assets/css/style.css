@@ -10826,4 +10826,8 @@ textarea.form-control-lg {
   min-height: 100vh;
 }
 
+.change_avatar {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */

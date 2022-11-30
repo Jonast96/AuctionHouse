@@ -164,12 +164,28 @@
         class="profile_container rounded bg-info container m-5 mx-auto row p-4 text-center"
       >
         <div class="col-md-4">
-          <img
-            class="img-fluid rounded-circle"
-            src="/images/hasbuuuuuuuuuulla.jpg"
-            style="width: 200px"
-            alt=""
-          />
+          <div class="img_container_profile"></div>
+          <p class="my-2 text-decoration-underline text-light change_avatar">
+            Change avatar
+          </p>
+
+          <div class="input-group mb-3 d-none change_avatar_input">
+            <input
+              type="text"
+              class="form-control updated_avatar_input"
+              placeholder="Avatar"
+              aria-label="Avatar"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-light rounded-0 ms-1 avatar_button"
+                type="button"
+              >
+                Change
+              </button>
+            </div>
+          </div>
         </div>
         <div class="col-md-4 d-grid text-center align-items-center">
           <h1 class="text-white username">Welcome username</h1>
@@ -178,11 +194,11 @@
           <h3 class="m-0 text-white">Account details</h3>
           <div class="m-2">
             <p class="m-0 text-white">Current auctions live</p>
-            <p class="btn btn-secondary m-0 w-50 current_auctions">23</p>
+            <p class="btn btn-secondary m-0 w-50 current_auctions">0</p>
           </div>
           <div class="m-2">
             <p class="m-0 text-white">Current credit</p>
-            <p class="btn btn-secondary w-50 current_credits">4200</p>
+            <p class="btn btn-secondary w-50 current_credits">0</p>
           </div>
         </div>
       </div>
