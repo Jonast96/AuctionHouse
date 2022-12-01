@@ -12,7 +12,7 @@ The client has specified the following requirements in the form of User Stories:
 
 - [x] ~~_A registered user may logout_~~ [2022-11-29]
 
-- [ ] A registered user may update their avatar
+- [x] ~~_A registered user may update their avatar_~~ [2022-12-01]
 
 - [ ] A registered user may create a Listing with a title, deadline date, media and description
 
