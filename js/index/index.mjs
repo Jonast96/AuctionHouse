@@ -14,16 +14,12 @@ async function getCall(url) {
   }
   const response = await fetch(url, postData)
   const json = await response.json()
-  // console.log(json)
+  console.log(json)
 
 
   const event = new Date(json[4].created);
   const options = { hour: 'numeric' };
   const time = event.toLocaleDateString("en-us", options)
-
-
-
-
 
 
   for (let i = 0; i < 10; i++) {
@@ -39,12 +35,14 @@ const container = document.querySelector(".auctions_container")
 
 
 function createHtml(json, time) {
+  let highestBid = ""
 
-
-  const lastItem = json.bids.length - 1
-  console.log(lastItem)
-
-  console.log(json.bids[`${lastItem}`].amount)
+  if (json.bids.length >= 1) {
+    console.log(json.bids)
+    highestBid = json.bids.pop().amount
+  } else {
+    highestBid = "0"
+  }
 
 
   container.innerHTML += `          <div
@@ -71,7 +69,7 @@ class="row mt-5 bg-light border-bottom shadow-bottom border-secondary rounded co
     <h3 class="text-center">Current price</h3>
   </div>
   <div>
-    <h3 class="text-center ">$${json.bids.amount}</h3>
+    <h3 class="text-center ">$${highestBid}</h3>
   </div>
   <div class="d-flex justify-content-center">
     <button class="btn btn-info">View auction</button>
