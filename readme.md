@@ -14,13 +14,13 @@ The client has specified the following requirements in the form of User Stories:
 
 - [x] ~~_A registered user may update their avatar_~~ [2022-12-01]
 
-- [ ] A registered user may create a Listing with a title, deadline date, media and description
+- [x] ~~_A registered user may create a Listing with a title, deadline date, media and description_~~ [2022-12-03]
 
 - [ ] A registered user may add a Bid to another user’s Listing
 
-- [ ] A registered user may view the last highest Bid made on a Listing
+- [x] ~~_A registered user may view the last highest Bid made on a Listing_~~ [2022-12-01]
 
-- [ ] A registered user may view their total credit
+- [x] ~~_A registered user may view their total credit_~~ [2022-12-01]
 
 - [ ] A registered user may get credit by getting a successful Bid on their Listing
 

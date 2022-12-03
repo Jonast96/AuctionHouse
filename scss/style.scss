@@ -65,3 +65,14 @@
 .change_avatar {
   cursor: pointer;
 }
+
+.create {
+  main {
+    min-height: 90vh;
+    img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+  }
+}
