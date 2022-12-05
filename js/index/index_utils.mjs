@@ -42,7 +42,7 @@ export function createHtml(json, time) {
           <h3 class="text-center ">$${highestBid}</h3>
         </div>
         <div class="d-flex justify-content-center">
-          <button class="btn btn-info">View auction</button>
+          <a href="single_listing.html?id=${json.id}" class="btn btn-info">View auction</a>
         </div>
       </div>
       </div>`

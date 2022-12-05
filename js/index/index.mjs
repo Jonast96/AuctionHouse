@@ -2,7 +2,9 @@ import { logOutFunctions, baseUrl } from "../utils.mjs";
 import { createHtml } from "./index_utils.mjs"
 
 logOutFunctions()
-const getUrl = `${baseUrl}/api/v1/auction/listings/?_bids=true`
+const getUrl = `${baseUrl}/api/v1/auction/listings/?_bids=true&sort=updated&sortOrder=asc`
+
+
 
 
 async function getCall(url) {

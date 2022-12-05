@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body class="bg-primary create">
+  <body class="bg-primary">
     <header class="header">
       <nav class="navbar navbar-expand-lg">
         <div class="container d-flex justify-content-between">
@@ -123,7 +123,7 @@
                       <li class="nav-item dropdown">
                         <a
                           class="nav-link dropdown-toggle"
-                          href="profile.html"
+                          href="/index.html"
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
@@ -143,9 +143,7 @@
                             >
                           </li>
                           <li>
-                            <a class="dropdown-item" href="/create_listing.html"
-                              >New auction</a
-                            >
+                            <a class="dropdown-item" href="#">New auction</a>
                           </li>
                           <li>
                             <a class="dropdown-item log_out_mobile" href="#"
@@ -163,122 +161,133 @@
         </div>
       </nav>
     </header>
-    <main class="container align-items-center d-grid">
-      <div class="row justify-content-center">
-        <div class="d-flex justify-content-between mb-3">
-          <div class="mx-1 mx-md-4">
-            <h4>Create your new listing</h4>
+    <main class="container single_listing">
+      <div>
+        <div class="row mb-md-3">
+          <div>
+            <h3>Title</h3>
+            <p>21.12.22</p>
           </div>
-          <div class="mx-1 mx-md-4">
-            <button class="btn btn-secondary preview_button">Preview</button>
-          </div>
-        </div>
-        <div class="col-12 col-lg-6">
-          <form class="mx-1 mx-md-4 form_" id="form">
-            <div class="d-flex flex-row align-items-center">
-              <div class="form-floating flex-fill mb-2">
-                <input
-                  type="title"
-                  class="form-control border"
-                  placeholder="title"
-                  id="title"
-                  required
-                />
+          <div class="col-12 col-md-7">
+            <!-- <img
+              class="img-fluid rounded"
+              src="/images/hasbuuuuuuuuuulla.jpg"
+              alt=""
+            /> -->
 
-                <label for="floatingInput">Title</label>
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="true"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
               </div>
-            </div>
-            <div class="d-flex flex-row align-items-center">
-              <div class="form-floating flex-fill mb-2">
-                <input
-                  type="media"
-                  class="form-control"
-                  placeholder="Main image"
-                  id="main_image"
-                  required
-                />
-                <label class="form-label" for="form3Example4c"
-                  >Main image</label
-                >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="/images/hasbuuuuuuuuuulla.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img src="/images/logo.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/images/return.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/images/saftey.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
               </div>
-            </div>
-            <div class="d-flex flex-row align-items-center">
-              <div class="form-floating d-flex w-100 mb-2">
-                <input
-                  type="media"
-                  class="form-control"
-                  placeholder="Images"
-                  id="images"
-                />
-
-                <button type="button" class="btn btn-outline-secondary mx-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    fill="currentColor"
-                    class="bi bi-plus"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
-                    ></path>
-                  </svg>
-                  <span class="visually-hidden">Button</span>
-                </button>
-
-                <label class="form-label" for="form3Example4c">Images</label>
-              </div>
-            </div>
-            <div class="form-group shadow-textarea mb-2">
-              <textarea
-                class="form-control z-depth-1"
-                rows="4"
-                placeholder="Description"
-                id="description"
-                required
-              ></textarea>
-            </div>
-            <div class="d-flex flex-row align-items-center mb-3">
-              <input
-                type="datetime-local"
-                id="date-picker"
-                class="p-1 rounded border-0 w-100"
-                required
-              />
-            </div>
-
-            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
               <button
-                type="submit"
-                class="btn btn-info btn-lg mx-2 create_listing_button"
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
               >
-                Create listing
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
               </button>
             </div>
-          </form>
-        </div>
-        <div class="col-12 col-lg-6 preview_container">
-          <img
-            src="https://loremflickr.com/320/240"
-            class="img-fluid rounded"
-            alt=""
-          />
-          <div class="mt-2 d-flex justify-content-between">
-            <h3>Title</h3>
-            <p>Listing ending</p>
           </div>
-          <div>
+          <div class="col-12 col-md-5">
+            <ul class="list-group">
+              <li class="list-group-item mb-2">Seller</li>
+              <li class="list-group-item mb-2">Email</li>
+              <li class="list-group-item mb-2">Bids</li>
+              <li class="list-group-item mb-2">Auction started</li>
+              <li class="list-group-item mb-2">Auction ending</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-7 col-12">
             <p>
-              This is where your description will show. Ps, if you really like
-              cats feel free to sit here and refresh the page for some
-              serotonin.
-              <br />
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
-              accusantium repudiandae adipisci quisquam perspiciatis. Nisi earum
-              sunt corporis exercitationem saepe magni neque sint. Repudiandae
-              soluta at veritatis dolorem unde porro.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              optio, expedita perspiciatis ex cum, architecto quidem voluptas
+              dignissimos minima nobis fugit, eos vero a quibusdam. Debitis
+              ducimus dolor soluta cupiditate!
             </p>
+          </div>
+          <div class="col-md-5 col-12">
+            <ul class="d-flex list-unstyled justify-content-between">
+              <li class="">Current bid</li>
+              <li class="">Countdown</li>
+            </ul>
+            <div class="text-center">
+              <button class="btn btn-primary">Bid now</button>
+            </div>
           </div>
         </div>
       </div>
@@ -345,7 +354,7 @@
         </ul>
       </div>
     </footer>
-    <script type="module" src="/js/create_listing/create_listing.mjs"></script>
+    <script type="module" src="/js/single_listing/single_listing.mjs"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"

@@ -4,7 +4,7 @@ logOutFunctions()
 
 
 const titleInput = document.getElementById("title")
-const mediaInput = document.getElementById("media")
+const mediaInput = document.getElementById("main_image")
 const descriptionInput = document.getElementById("description")
 const listingEndingInput = document.getElementById("date-picker")
 const previewButton = document.querySelector(".preview_button")

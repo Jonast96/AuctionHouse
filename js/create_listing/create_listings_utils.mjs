@@ -1,7 +1,7 @@
 export function createPreview() {
     const previewContainer = document.querySelector(".preview_container")
     const listingEndingInput = document.getElementById("date-picker")
-    const mediaInput = document.getElementById("media")
+    const mediaInput = document.getElementById("main_image")
     const titleInput = document.getElementById("title")
     const descriptionInput = document.getElementById("description")
 
