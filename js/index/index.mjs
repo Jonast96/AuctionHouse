@@ -1,6 +1,6 @@
-import { logOutFunctions, baseUrl } from "../utils.mjs";
+import { logOutFunctions, baseUrl, displayCreditScore, profileUrl } from "../utils.mjs";
 import { createHtml } from "./index_utils.mjs"
-
+displayCreditScore(profileUrl)
 logOutFunctions()
 const getUrl = `${baseUrl}/api/v1/auction/listings/?_bids=true&sort=updated&sortOrder=asc`
 

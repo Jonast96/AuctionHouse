@@ -1,6 +1,8 @@
 import {
     logOutFunctions,
-    redirectIfNotLoggedIn
+    redirectIfNotLoggedIn,
+    displayCreditScore,
+    baseUrl
 
 } from "../utils.mjs"
 
@@ -24,7 +26,6 @@ changeAvatar.addEventListener("click", () => {
 
 const userToken = localStorage.getItem("userToken")
 const localStorageUserName = localStorage.getItem("userName")
-const baseUrl = "https://nf-api.onrender.com"
 const profileUrl = `${baseUrl}/api/v1/auction/profiles/${localStorageUserName}?_listings=true`
 const updateUrl = `${baseUrl}/api/v1/auction/profiles/${localStorageUserName}/media
 `
@@ -89,3 +90,6 @@ const avatarButton = document.querySelector(".avatar_button")
 avatarButton.addEventListener("click", () => {
     updatedAvatarFunction()
 })
+
+
+displayCreditScore(profileUrl)

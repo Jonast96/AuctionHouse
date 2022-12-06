@@ -4,9 +4,11 @@ import {
 
 import {
     logOutFunctions,
+    displayCreditScore,
+    profileUrl
 } from "../utils.mjs"
 
-
+displayCreditScore(profileUrl)
 
 logOutFunctions()
 const registerForm = document.getElementById("form")

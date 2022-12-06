@@ -1,15 +1,13 @@
 export function createPreview() {
     const previewContainer = document.querySelector(".preview_container")
     const listingEndingInput = document.getElementById("date-picker")
-    const mediaInput = document.getElementById("main_image")
+    const mediaInput = document.querySelector("#images")
     const titleInput = document.getElementById("title")
     const descriptionInput = document.getElementById("description")
 
     const event = new Date(listingEndingInput.value);
     const options = { hour: 'numeric', minute: 'numeric' };
     const time = event.toLocaleDateString("en-us", options)
-
-
 
     previewContainer.innerHTML = `
     <img
@@ -28,3 +26,4 @@ export function createPreview() {
     </div>
 `
 }
+

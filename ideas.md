@@ -7,3 +7,5 @@
 # don't miss out section
 
 # image sizes
+
+# let user remove images

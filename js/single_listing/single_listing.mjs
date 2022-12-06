@@ -1,7 +1,7 @@
-import { logOutFunctions, baseUrl, userToken } from "../utils.mjs";
+import { logOutFunctions, baseUrl, userToken, displayCreditScore, profileUrl } from "../utils.mjs";
 import { createHtml } from "./single_listing_utils.mjs"
 logOutFunctions()
-
+displayCreditScore(profileUrl)
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -45,7 +45,14 @@ async function postBid(url) {
   console.log(json)
   const errorMsg = document.querySelector(".error_msg")
 
-  if (!response.ok) {
+  if (response.ok) {
+    errorMsg.innerHTML = `Your bid of: ${bidInput.value} has successfully been placed`
+    errorMsg.classList.add("text-success")
+    errorMsg.classList.remove("text-danger")
+  } else {
     errorMsg.innerHTML = `${json.errors[0].message}`
+    errorMsg.classList.remove("text-success")
+    errorMsg.classList.add("text-danger")
+
   }
 }

@@ -1,10 +1,12 @@
 import { sendUserDataToLocalStorage } from "./login_utils.mjs"
 import {
     baseUrl,
-    logOutFunctions
+    logOutFunctions,
+    displayCreditScore,
+    profileUrl
 
 } from "../utils.mjs"
-
+displayCreditScore(profileUrl)
 logOutFunctions()
 
 const emailInput = document.querySelector(".email_input")

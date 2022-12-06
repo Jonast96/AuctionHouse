@@ -85,13 +85,7 @@
                         >Profile</a
                       >
                     </li>
-                    <li>
-                      <a
-                        class="nav-item text-secondary"
-                        href="/create_listing.html"
-                        >New auction</a
-                      >
-                    </li>
+                    <li class="nav-item text-secondary credits"></li>
                     <li>
                       <a
                         class="nav-item text-secondary log_out_desktop"
@@ -143,9 +137,10 @@
                             >
                           </li>
                           <li>
-                            <a class="dropdown-item" href="/create_listing.html"
-                              >New auction</a
-                            >
+                            <a
+                              class="dropdown-item credits"
+                              href="/create_listing.html"
+                            ></a>
                           </li>
                           <li>
                             <a class="dropdown-item log_out_mobile" href="#"
@@ -188,20 +183,7 @@
                 <label for="floatingInput">Title</label>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center">
-              <div class="form-floating flex-fill mb-2">
-                <input
-                  type="media"
-                  class="form-control"
-                  placeholder="Main image"
-                  id="main_image"
-                  required
-                />
-                <label class="form-label" for="form3Example4c"
-                  >Main image</label
-                >
-              </div>
-            </div>
+
             <div class="d-flex flex-row align-items-center">
               <div class="form-floating d-flex w-100 mb-2">
                 <input
@@ -211,7 +193,10 @@
                   id="images"
                 />
 
-                <button type="button" class="btn btn-outline-secondary mx-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary mx-2 add_media_button"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -230,6 +215,7 @@
                 <label class="form-label" for="form3Example4c">Images</label>
               </div>
             </div>
+            <div class="image_display d-flex flex-wrap"></div>
             <div class="form-group shadow-textarea mb-2">
               <textarea
                 class="form-control z-depth-1"

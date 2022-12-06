@@ -7,6 +7,9 @@ const logOutMobile = document.querySelector(".log_out_mobile")
 export const baseUrl = "https://nf-api.onrender.com"
 export const userToken = localStorage.getItem("userToken")
 
+const localStorageUserName = localStorage.getItem("userName")
+export const profileUrl = `${baseUrl}/api/v1/auction/profiles/${localStorageUserName}?_listings=true`
+
 
 
 
@@ -35,3 +38,24 @@ export function redirectIfNotLoggedIn(token) {
         window.location.href = "index.html"
     }
 }
+
+
+
+export async function displayCreditScore(url) {
+    const postData = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${userToken}`
+        },
+    }
+    const response = await fetch(url, postData)
+    const json = await response.json()
+    console.log(json)
+    const creditScore = document.querySelectorAll(".credits")
+    for (let i = 0; i < creditScore.length; i++) {
+        creditScore[i].innerHTML = `Credits: ${json.credits}`
+
+    }
+}
+
