@@ -1,6 +1,6 @@
 # fix responsive
 
-# multiple media
+# multiple media on create and single listing
 
 # user feedback create listing
 

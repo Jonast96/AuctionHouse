@@ -10839,6 +10839,9 @@ textarea.form-control-lg {
   width: 100%;
 }
 
+.single_listing {
+  min-height: 90vh;
+}
 .single_listing img {
   height: 300px;
   width: 100%;
