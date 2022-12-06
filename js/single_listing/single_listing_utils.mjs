@@ -51,18 +51,18 @@ export function createHtml(json) {
         </div>
           </div>
           <div class="col-12 col-md-5">
-            <ul class="list-group">
-              <li class="list-group-item mb-2">Seller: ${json.seller.name}</li>
-              <li class="list-group-item mb-2">Email: ${json.seller.email}</li>
-              <li class="list-group-item mb-2">Bids: ${json.bids.length}</li>
-              <li class="list-group-item mb-2">Created: ${created}</li>
-              <li class="list-group-item mb-2">Ends at: ${expires}</li>
+            <ul class="list-group mb-3 mb-md-0">
+              <li class="list-group-item mb-md-2">Seller: ${json.seller.name}</li>
+              <li class="list-group-item mb-md-2">Email: ${json.seller.email}</li>
+              <li class="list-group-item mb-md-2">Bids: ${json.bids.length}</li>
+              <li class="list-group-item mb-md-2">Created: ${created}</li>
+              <li class="list-group-item mb-md-2">Ends at: ${expires}</li>
             </ul>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-7 col-12">
+          <div class="col-md-7 col-12 mb-3 mb-md-0">
             <p>
             ${json.description}
             </p>
