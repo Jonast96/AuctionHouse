@@ -1,11 +1,9 @@
-# fix responsive
-
-# multiple media on create and single listing
-
-# user feedback create listing
-
 # don't miss out section
 
-# image sizes
-
 # let user remove images
+
+# user has to be logged in to place bid
+
+# filter
+
+# Display user posts on profile

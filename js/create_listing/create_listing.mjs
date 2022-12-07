@@ -1,7 +1,19 @@
-import { logOutFunctions, baseUrl, userToken, profileUrl, displayCreditScore } from "../utils.mjs";
-import { createPreview } from "./create_listings_utils.mjs"
+import {
+    logOutFunctions,
+    baseUrl,
+    userToken,
+    profileUrl,
+    displayCreditScore
+} from "../utils.mjs";
+
+import {
+    createPreview,
+    populateAndDisplayImageArray
+} from "./create_listings_utils.mjs"
+
 logOutFunctions()
 displayCreditScore(profileUrl)
+
 
 const titleInput = document.getElementById("title")
 const descriptionInput = document.getElementById("description")
@@ -9,31 +21,22 @@ const listingEndingInput = document.getElementById("date-picker")
 const previewButton = document.querySelector(".preview_button")
 const form = document.querySelector(".form_")
 const postUrl = baseUrl + "/api/v1/auction/listings"
+const addMediaBtn = document.querySelector(".add_media_button")
+const errorMsg = document.querySelector(".error")
+
+
+
 
 
 previewButton.addEventListener("click", () => {
     createPreview()
 })
 
-let mediaArray = []
+export let mediaArray = []
 
-const addMediaBtn = document.querySelector(".add_media_button")
 addMediaBtn.addEventListener("click", () => {
-    const multipleMediaContainer = document.querySelector(".image_display")
-    let multipleMediaValue = document.querySelector("#images")
+    populateAndDisplayImageArray()
 
-    mediaArray.push(multipleMediaValue.value)
-    multipleMediaContainer.innerHTML += `
-    <img
-    class="mx-1 mb-2"
-    style="width: 50px; height: 50px"
-    src="${multipleMediaValue.value}"
-    alt=""
-  />
-    `
-
-    multipleMediaValue.value = ""
-    console.log(mediaArray)
 })
 
 
@@ -63,7 +66,7 @@ async function postCall(url) {
         if (response.ok) {
             alert("Listing successfully created")
         } else {
-            console.log("not ok")
+            errorMsg.innerHTML = "There has been a mistake, please try again"
         }
     } catch (error) {
         console.log(error)

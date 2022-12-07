@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "Sass scss:assets/css",
-    "watch": "sass --watch scss:assets/css"
+    "watch": "sass --watch scss:assets/css",
+    "build": "sass scss:dist/css"
   },
   "repository": {
     "type": "git",

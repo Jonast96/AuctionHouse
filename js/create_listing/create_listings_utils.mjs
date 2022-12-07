@@ -1,3 +1,5 @@
+import { mediaArray } from "./create_listing.mjs"
+
 export function createPreview() {
     const previewContainer = document.querySelector(".preview_container")
     const listingEndingInput = document.getElementById("date-picker")
@@ -9,9 +11,11 @@ export function createPreview() {
     const options = { hour: 'numeric', minute: 'numeric' };
     const time = event.toLocaleDateString("en-us", options)
 
+    console.log(mediaInput)
+
     previewContainer.innerHTML = `
     <img
-    src="${mediaInput.value}"
+    src="${mediaArray[0]}"
     class="img-fluid rounded"
     alt=""
     />
@@ -27,3 +31,22 @@ export function createPreview() {
 `
 }
 
+
+export function populateAndDisplayImageArray() {
+
+    const multipleMediaContainer = document.querySelector(".image_display")
+    let multipleMediaValue = document.querySelector("#images")
+
+    mediaArray.push(multipleMediaValue.value)
+    multipleMediaContainer.innerHTML += `
+    <img
+    class="mx-1 mb-2 rounded shadow"
+    style="width: 75px; height: 75px"
+    src="${multipleMediaValue.value}"
+    alt=""
+  />
+    `
+
+    multipleMediaValue.value = ""
+    console.log(mediaArray)
+}
