@@ -10789,6 +10789,10 @@ textarea.form-control-lg {
 .landing_page .header {
   min-height: 100vh;
 }
+.landing_page .expiring_img {
+  height: 200px;
+  object-fit: cover;
+}
 
 .index_main {
   min-height: 100vh;

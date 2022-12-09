@@ -61,7 +61,6 @@ async function postCall(url) {
         }
         const response = await fetch(url, postData);
         const json = await response.json();
-        console.log(response)
 
         if (response.ok) {
             alert("Listing successfully created")

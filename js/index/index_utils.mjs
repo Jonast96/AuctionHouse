@@ -52,3 +52,58 @@ export function createHtml(json, time) {
   }
 
 }
+
+
+
+
+
+
+
+
+export function createExpiringHtml(array) {
+  const container = document.querySelector(".expiring_container")
+
+  let highestBid = ""
+  for (let i = 0; i < 4; i++) {
+
+    if (array[i].bids.length >= 1) {
+      highestBid = array[i].bids.pop().amount
+    } else {
+      highestBid = "0"
+    }
+
+    const targetDate = new Date(array[i].endsAt);
+
+    const currentDate = new Date();
+    const diff = targetDate - currentDate;
+
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    let test = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
+
+    container.innerHTML += `
+  <div class="col">
+  <div class="card m-3 deals_card m-auto shadow-lg m-auto">
+    <img
+      src="${array[i].media[0]}"
+      class="card-img-top expiring_img"
+      alt="${array[i].title}"
+    />
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">${array[i].title}</li>
+      <li class="list-group-item">Current bid: ${highestBid}</li>
+    </ul>
+    <div class="card-body">
+      <p class="text-center expires_container h4">Expires in:${test}</p>
+      <div class="d-grid">
+        <a href="single_listing.html?id=${array[i].id}" class="btn btn-info">Join auction</a>
+      </div>
+    </div>
+  </div>
+</div>
+  `
+  }
+}
