@@ -1,5 +1,3 @@
-# don't miss out section
-
 # let user remove images
 
 # user has to be logged in to place bid

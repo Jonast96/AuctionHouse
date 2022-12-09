@@ -2,35 +2,32 @@ import {
     logOutFunctions,
     redirectIfNotLoggedIn,
     displayCreditScore,
-    baseUrl
+    baseUrl,
+    userToken
 
-} from "../utils.mjs"
-
-
+} from "../utils.mjs";
+import {
+    populateListingsHtml,
+    displayUserData
+} from "./profile_utils.mjs";
 
 logOutFunctions()
+redirectIfNotLoggedIn(userToken)
 
-const userName = document.querySelector(".username")
-const credits = document.querySelector(".current_credits")
-const auctions = document.querySelector(".current_auctions")
+
+
 const changeAvatar = document.querySelector(".change_avatar")
 const changeAvatarInput = document.querySelector(".change_avatar_input")
-const userImage = document.querySelector(".img_container_profile")
+const localStorageUserName = localStorage.getItem("userName")
+const profileUrl = `${baseUrl}/api/v1/auction/profiles/${localStorageUserName}`
+const listingsUrl = `${baseUrl}/api/v1/auction/profiles/${localStorageUserName}/listings?_seller=true&_bids=true&sort=endsAt&sortOrder=asc`
+const updateUrl = `${baseUrl}/api/v1/auction/profiles/${localStorageUserName}/media`
+displayCreditScore(profileUrl)
 
 
 changeAvatar.addEventListener("click", () => {
-
     changeAvatarInput.classList.replace("d-none", "d-flex")
 })
-
-
-const userToken = localStorage.getItem("userToken")
-const localStorageUserName = localStorage.getItem("userName")
-const profileUrl = `${baseUrl}/api/v1/auction/profiles/${localStorageUserName}?_listings=true`
-const updateUrl = `${baseUrl}/api/v1/auction/profiles/${localStorageUserName}/media
-`
-
-redirectIfNotLoggedIn(userToken)
 
 
 async function getUser() {
@@ -43,21 +40,11 @@ async function getUser() {
     }
     const response = await fetch(profileUrl, postData)
     const json = await response.json()
-    console.log(json)
+    const listingsResponse = await fetch(listingsUrl, postData)
+    const listingJson = await listingsResponse.json()
 
-    userName.innerHTML = `Hello ${json.name}!`
-    credits.innerHTML = `${json.credits}`
-    auctions.innerHTML = `${json._count.listings}`
-    userImage.innerHTML = `
-    <img
-    class="img-fluid rounded-circle"
-    style="width:200px;height:200px;object-fit:cover;"
-    src="${json.avatar}"
-    alt=""
-  />
-    `
-
-
+    displayUserData(json)
+    populateListingsHtml(listingJson)
 }
 getUser()
 
@@ -74,7 +61,6 @@ async function putUser(url, updatedAvatar) {
     }
     const response = await fetch(url, postData)
     const json = await response.json()
-    console.log(json)
 }
 
 
@@ -92,4 +78,8 @@ avatarButton.addEventListener("click", () => {
 })
 
 
-displayCreditScore(profileUrl)
+
+
+
+
+

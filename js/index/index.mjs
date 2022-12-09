@@ -27,9 +27,6 @@ async function getCall(url) {
   const json = await response.json()
 
   for (let i = 0; i < json.length; i++) {
-
-
-
     const event = new Date(json[i].endsAt);
     const options = { hour: 'numeric', minute: 'numeric' };
     const time = event.toLocaleDateString("en-us", options)
@@ -38,9 +35,6 @@ async function getCall(url) {
 }
 
 getCall(getUrl)
-
-
-
 
 
 async function expiringListingCall(url) {
@@ -52,18 +46,11 @@ async function expiringListingCall(url) {
   const response = await fetch(url, postData)
   const json = await response.json()
   const listingsWithImages = json.filter(listing => listing.media.length > 0);
-
-
-
-
-
-
-
   createExpiringHtml(listingsWithImages)
-
 }
-
 expiringListingCall(expiringListing)
+
+
 
 
 

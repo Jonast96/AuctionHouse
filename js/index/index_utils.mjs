@@ -73,7 +73,6 @@ export function createExpiringHtml(array) {
     }
 
     const targetDate = new Date(array[i].endsAt);
-
     const currentDate = new Date();
     const diff = targetDate - currentDate;
 
@@ -81,7 +80,7 @@ export function createExpiringHtml(array) {
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const seconds = Math.floor((diff / 1000) % 60);
 
-    let test = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
+    let countdown = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
 
     container.innerHTML += `
   <div class="col">
@@ -97,7 +96,7 @@ export function createExpiringHtml(array) {
       <li class="list-group-item">Current bid: ${highestBid}</li>
     </ul>
     <div class="card-body">
-      <p class="text-center expires_container h4">Expires in:${test}</p>
+      <p class="text-center expires_container h4">Expires in:${countdown}</p>
       <div class="d-grid">
         <a href="single_listing.html?id=${array[i].id}" class="btn btn-info">Join auction</a>
       </div>
