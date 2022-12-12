@@ -40,7 +40,9 @@ async function getCall(url) {
     const options = { hour: 'numeric', minute: 'numeric' };
     const time = event.toLocaleDateString("en-us", options)
     createHtml(json[i], time)
+
   }
+  searchListings(json)
 }
 
 getCall(getUrl)
@@ -70,6 +72,32 @@ expiringListingCall(expiringListing)
 
 
 
+function searchListings(json) {
+  const search = document.querySelector(".search_input");
 
+  search.onkeyup = function (event) {
 
+    const searchValue = event.target.value.trim().toLowerCase();
+
+    const filteredListings = json.filter(function (listing) {
+      if (listing.title.toLowerCase().startsWith(searchValue)) {
+        return true;
+      }
+    });
+
+    createFilteredHtml(filteredListings);
+  };
+}
+
+function createFilteredHtml(listings) {
+  const container = document.querySelector(".auctions_container");
+  container.innerHTML = "";
+
+  listings.forEach(function (json) {
+    const event = new Date(json.endsAt);
+    const options = { hour: 'numeric', minute: 'numeric' };
+    const time = event.toLocaleDateString("en-us", options)
+    createHtml(json, time)
+  });
+}
 

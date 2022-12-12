@@ -13,9 +13,6 @@
  */
 export function createHtml(json, time) {
   const container = document.querySelector(".auctions_container")
-
-
-
   let highestBid = ""
 
   if (json.bids.length >= 1) {

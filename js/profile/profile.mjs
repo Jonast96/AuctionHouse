@@ -99,10 +99,3 @@ const avatarButton = document.querySelector(".avatar_button")
 avatarButton.addEventListener("click", () => {
     updatedAvatarFunction()
 })
-
-
-
-
-
-
-

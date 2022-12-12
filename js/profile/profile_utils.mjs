@@ -42,7 +42,7 @@ export function populateListingsHtml(array) {
             <div class="card-body">
               <p class="text-center expires_container h4">${countdown}</p>
               <div class="d-grid">
-                <a href="single_listing.html?id=${array[i].id}" class="btn btn-info">Join auction</a>
+                <a href="single_listing.html?id=${array[i].id}" class="btn btn-info">View</a>
               </div>
             </div>
           </div>
