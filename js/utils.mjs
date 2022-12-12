@@ -12,7 +12,11 @@ export const profileUrl = `${baseUrl}/api/v1/auction/profiles/${localStorageUser
 
 
 
-
+/**
+ * If the user is logged in, shows the logged in elements and hides the not logged in elements.
+ * If the user clicks the log out button (on desktop or mobile), it clears the local storage and reloads the page.
+ *
+ */
 export function logOutFunctions() {
 
     if (userToken) {
@@ -32,7 +36,12 @@ export function logOutFunctions() {
     })
 }
 
-
+/**
+ * If the provided token is not truthy, redirects the user to the index page.
+ *
+ * @param {string} token - The token to check.
+ *
+ */
 export function redirectIfNotLoggedIn(token) {
     if (!token) {
         window.location.href = "index.html"
@@ -40,7 +49,14 @@ export function redirectIfNotLoggedIn(token) {
 }
 
 
-
+/**
+ * Makes a GET request to the specified URL and retrieves the user's credit score data.
+ * Then it updates the credit score elements on the page with the user's credit score.
+ *
+ * @async
+ * @param {string} url - The URL to make the GET request to for getting the user's credit score data.
+ *
+ */
 export async function displayCreditScore(url) {
     const postData = {
         method: "GET",

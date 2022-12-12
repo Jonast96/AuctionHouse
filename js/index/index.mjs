@@ -16,7 +16,16 @@ const expiringListing = `${baseUrl}/api/v1/auction/listings/?_seller=true&_bids=
 
 
 
-
+/**
+ * Makes a GET request to the specified URL and creates HTML code for the
+ * auction listings based on the response data.
+ *
+ * @async
+ * @param {string} url - The URL to make the GET request to.
+ *
+ * @returns {Promise} Resolves with the HTML code for the auction listings,
+ *                    or rejects with an error if there was a problem.
+ */
 async function getCall(url) {
   const postData = {
     headers: {
@@ -36,7 +45,16 @@ async function getCall(url) {
 
 getCall(getUrl)
 
-
+/**
+ * Makes a GET request to the specified URL and creates HTML code for the
+ * expiring auctions based on the response data.
+ *
+ * @async
+ * @param {string} url - The URL to make the GET request to.
+ *
+ * @returns {Promise} Resolves with the HTML code for the expiring auctions,
+ *                    or rejects with an error if there was a problem.
+ */
 async function expiringListingCall(url) {
   const postData = {
     headers: {

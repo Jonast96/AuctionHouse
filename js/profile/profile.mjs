@@ -29,7 +29,16 @@ changeAvatar.addEventListener("click", () => {
     changeAvatarInput.classList.replace("d-none", "d-flex")
 })
 
-
+/**
+ * Makes a GET request to the specified profile and listings URLs using the provided user token.
+ * Displays the user data and populates the listings HTML with the returned data.
+ *
+ * @async
+ * @param {string} profileUrl - The URL to make the GET request to for the user's profile data.
+ * @param {string} listingsUrl - The URL to make the GET request to for the user's listings data.
+ * @param {string} userToken - The user's authorization token to include in the request headers.
+ *
+ */
 async function getUser() {
     const postData = {
         method: "GET",
@@ -49,7 +58,15 @@ async function getUser() {
 getUser()
 
 
-
+/**
+ * Makes a PUT request to the specified URL with the updated avatar data, using the provided user token.
+ *
+ * @async
+ * @param {string} url - The URL to make the PUT request to for updating the user's avatar data.
+ * @param {string} userToken - The user's authorization token to include in the request headers.
+ * @param {object} updatedAvatar - The updated avatar data to include in the request body.
+ *
+ */
 async function putUser(url, updatedAvatar) {
     const postData = {
         method: "PUT",
@@ -63,7 +80,13 @@ async function putUser(url, updatedAvatar) {
     const json = await response.json()
 }
 
-
+/**
+ * Retrieves the updated avatar input value from the DOM, creates an object with the new avatar data,
+ * and makes a PUT request to the specified URL with the updated avatar data.
+ *
+ * @param {string} updateUrl - The URL to make the PUT request to for updating the user's avatar data.
+ *
+ */
 function updatedAvatarFunction() {
     const updatedAvatarInput = document.querySelector(".updated_avatar_input")
     console.log(updatedAvatarInput.value)

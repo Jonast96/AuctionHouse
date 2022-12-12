@@ -20,7 +20,13 @@ const loginSuccessText = document.querySelector(".login_succes_text")
 
 const errorMessage = document.querySelector(".response_error")
 
-
+/**
+ * Checks if the password and repeat password inputs are the same.
+ * If they are the same, it removes any error styling and messages.
+ * If they are not the same, it adds success styling and shows an success message.
+ *
+ * @returns {boolean} - Whether the password and repeat password inputs are the same.
+ */
 export function passwordIsSameAsRepeatPassword() {
     if (password.value === repeatPassword.value) {
         repeatPassword.classList.remove("border-danger")
@@ -35,6 +41,14 @@ export function passwordIsSameAsRepeatPassword() {
     }
 }
 
+
+/**
+ * Checks if the email input is a valid "noroff.no" email address.
+ * If it is a valid email, it removes any error styling and messages.
+ * If it is not a valid email, it adds error styling and shows an error message.
+ *
+ * @returns {boolean} - Whether the email input is a valid "noroff.no" email address.
+ */
 export function emailIsValid() {
     if (email.value.includes("noroff.no")) {
         email.classList.remove("border-danger")
@@ -51,7 +65,16 @@ export function emailIsValid() {
 }
 
 
-
+/**
+ * Makes a POST request to the specified URL with the provided user data.
+ * If the request is successful, it adds success styling and shows a success message.
+ * If the request is not successful, it shows an error message.
+ *
+ * @async
+ * @param {string} url - The URL to make the POST request to for registering the user.
+ * @param {object} userData - The user data to include in the request body.
+ *
+ */
 async function registerUser(url, userData) {
     try {
         const postData = {
@@ -85,7 +108,11 @@ async function registerUser(url, userData) {
 }
 
 
-
+/**
+ * Retrieves the user data from the input fields, checks if the password and email inputs are valid,
+ * and if they are, makes a POST request to register the user.
+ *
+ */
 export function storeUserData() {
 
     const userToRegister = {

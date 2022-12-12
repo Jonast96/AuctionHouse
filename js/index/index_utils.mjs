@@ -1,3 +1,16 @@
+/**
+ * Generates HTML code for a single auction listing based on the provided data.
+ *
+ * @param {Object} json - The data for the auction listing.
+ * @param {string} json.id - The unique identifier for the listing.
+ * @param {string} json.title - The title of the listing.
+ * @param {string} json.description - The description of the listing.
+ * @param {Array} json.media - The media (e.g. images) associated with the listing.
+ * @param {Array} json.bids - The bids that have been placed on the listing.
+ * @param {string} time - The time when the auction for the listing ends.
+ *
+ * @returns {string} The HTML code for the auction listing.
+ */
 export function createHtml(json, time) {
   const container = document.querySelector(".auctions_container")
 
@@ -53,13 +66,18 @@ export function createHtml(json, time) {
 
 }
 
-
-
-
-
-
-
-
+/**
+ * Generates HTML code for the expiring auctions section based on the provided data.
+ *
+ * @param {Array} array - The data for the auctions that are about to expire.
+ * @param {Object} array[].id - The unique identifier for the listing.
+ * @param {string} array[].title - The title of the listing.
+ * @param {Array} array[].media - The media (e.g. images) associated with the listing.
+ * @param {Array} array[].bids - The bids that have been placed on the listing.
+ * @param {string} array[].endsAt - The date and time when the auction for the listing ends.
+ *
+ * @returns {string} The HTML code for the expiring auctions section.
+ */
 export function createExpiringHtml(array) {
   const container = document.querySelector(".expiring_container")
 

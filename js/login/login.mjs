@@ -12,12 +12,15 @@ logOutFunctions()
 const emailInput = document.querySelector(".email_input")
 const passwordInput = document.querySelector(".password_input")
 const loginForm = document.querySelector(".login_form")
-
 const errorMessage = document.querySelector(".error_message")
-
 const loginUrl = `${baseUrl}/api/v1/auction/auth/login`
 
-
+/**
+ * Handles the login form submission.
+ *
+ * @returns {Promise} Resolves with the user data if the login was successful,
+ *                    or rejects with an error if there was a problem.
+ */
 loginForm.addEventListener("submit", async (e) => {
     try {
         e.preventDefault()
@@ -46,9 +49,6 @@ loginForm.addEventListener("submit", async (e) => {
     } catch (error) {
         console.log(error)
     }
-
-
-
 })
 
 
