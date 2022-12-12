@@ -26,7 +26,7 @@ The client has specified the following requirements in the form of User Stories:
 
 - [x] ~~_A registered user may use credit to make a Bid on another user’s Listing_~~ [2022-12-06]
 
-- [ ] A user (registered or not) may search through Listings
+- [x] ~~_A user (registered or not) may search through Listings_~~ [2022-12-12]
 
 # The company CTO has set the following technical restrictions:
 
@@ -48,6 +48,6 @@ The client has specified the following requirements in the form of User Stories:
 
 - [x] ~~_A kanban project board_~~ [2022-11-25]
 
-- [ ] A repository link
+- [x] ~~_A repository link_~~ [2022-12-12]
 
-- [ ] A hosted application demo link
+- [x] ~~_A hosted application demo link_~~ [2022-12-12]

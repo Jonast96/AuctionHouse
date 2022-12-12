@@ -13,7 +13,11 @@ export function createHtml(json) {
   // Find the highest bid
   let highestBid = "0";
   if (json.bids.length >= 1) {
-    highestBid = json.bids.pop().amount;
+    for (let i = 0; i < json.bids.length; i++) {
+      highestBid = json.bids[i].amount
+    }
+  } else {
+    highestBid = "0"
   }
 
   // Format the created and expires timestamps
@@ -83,7 +87,7 @@ export function createHtml(json) {
           </div>
           <div class="col-md-5 col-12 bg-light rounded py-3">
             <ul class="d-flex list-unstyled justify-content-between">
-              <li class="">Current bid: ${highestBid}</li>
+              <li class="">Current bid: $${highestBid}</li>
               <li class="">Ends in: ${countdown}</li>
             </ul>
             <div class="col-12 col-md-7 mx-auto">

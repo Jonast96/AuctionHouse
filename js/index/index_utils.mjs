@@ -16,13 +16,12 @@ export function createHtml(json, time) {
   let highestBid = ""
 
   if (json.bids.length >= 1) {
-    highestBid = json.bids.pop().amount
+    for (let i = 0; i < json.bids.length; i++) {
+      highestBid = json.bids[i].amount
+    }
   } else {
     highestBid = "0"
   }
-
-
-
   if (json.media[0]) {
 
     container.innerHTML += `          <div
@@ -108,7 +107,7 @@ export function createExpiringHtml(array) {
 
     <ul class="list-group list-group-flush">
       <li class="list-group-item">${array[i].title}</li>
-      <li class="list-group-item">Current bid: ${highestBid}</li>
+      <li class="list-group-item">Current bid: $${highestBid}</li>
     </ul>
     <div class="card-body">
       <p class="text-center expires_container h4">Expires in:${countdown}</p>

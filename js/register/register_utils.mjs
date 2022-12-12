@@ -50,7 +50,7 @@ export function passwordIsSameAsRepeatPassword() {
  * @returns {boolean} - Whether the email input is a valid "noroff.no" email address.
  */
 export function emailIsValid() {
-    if (email.value.includes("noroff.no")) {
+    if (email.value.includes("noroff.no" || email.value.includes("stud.noroff.no"))) {
         email.classList.remove("border-danger")
         email.classList.remove("border")
         invalidEmail.classList.replace("d-block", "d-none")
