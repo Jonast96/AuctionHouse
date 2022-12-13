@@ -48,9 +48,22 @@ export function createHtml(json) {
   // Generate the final HTML
   container.innerHTML = `
       <div class="row mb-md-3">
-            <div>
+            <div class="col-6">
               <h3>${json.title}</h3>
               <p>${created}</p>
+            </div>
+            <div class="col-6 justify-content-end d-flex">
+            <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle d-none edit_button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Edit post
+            </button>
+            <ul class="dropdown-menu">
+              <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Edit
+            </button></li>
+              <li><button class="dropdown-item" href="#">Delete</button></li>
+            </ul>
+          </div>
             </div>
             <div class="col-12 col-md-7">
             <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
@@ -140,5 +153,23 @@ export function onlyLoggedInUserCanBid() {
   } else {
     addBidContainer.classList.replace("d-flex", "d-none");
     signInButton.classList.add("d-block");
+  }
+}
+
+
+
+/**
+*
+Function that displays an edit button on a listing if the currently logged in user is the owner of the listing.
+@param {Object} json - The JSON object representing the listing.
+@param {string} json.seller.email - The email of the seller of the listing.
+*/
+export function displayEditButton(json) {
+  const editButton = document.querySelector(".edit_button")
+  const loggedInEmail = localStorage.getItem("userEmail")
+  const listingOwner = json.seller.email
+
+  if (loggedInEmail === listingOwner) {
+    editButton.classList.replace("d-none", "d-flex")
   }
 }

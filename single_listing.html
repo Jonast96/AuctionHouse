@@ -156,6 +156,101 @@
       </nav>
     </header>
     <div style="height: 100px"></div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit post</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="mx-1 mx-md-4 form_" id="form">
+              <div class="d-flex flex-row align-items-center">
+                <div class="form-floating flex-fill mb-2">
+                  <input
+                    type="title"
+                    class="form-control border"
+                    placeholder="title"
+                    id="title"
+                    required
+                  />
+
+                  <label for="floatingInput">New title</label>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row align-items-center">
+                <div class="form-floating d-flex w-100 mb-2">
+                  <input
+                    type="media"
+                    class="form-control"
+                    placeholder="Images"
+                    id="images"
+                  />
+
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary mx-2 add_media_button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="currentColor"
+                      class="bi bi-plus"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                      ></path>
+                    </svg>
+                    <span class="visually-hidden">Button</span>
+                  </button>
+
+                  <label class="form-label" for="form3Example4c"
+                    >New images</label
+                  >
+                </div>
+              </div>
+              <div class="image_display d-flex flex-wrap"></div>
+              <div class="form-group shadow-textarea mb-2">
+                <textarea
+                  class="form-control z-depth-1"
+                  rows="4"
+                  placeholder="New description"
+                  id="description"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn btn-info update_button">
+                  Save changes
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <main class="container single_listing d-grid mb-5">
       <div class="single_listing_container"></div>
     </main>
