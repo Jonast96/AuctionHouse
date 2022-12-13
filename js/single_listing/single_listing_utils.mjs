@@ -61,7 +61,7 @@ export function createHtml(json) {
               <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Edit
             </button></li>
-              <li><button class="dropdown-item" href="#">Delete</button></li>
+              <li><button class="dropdown-item delete_button" href="#">Delete</button></li>
             </ul>
           </div>
             </div>
@@ -172,4 +172,40 @@ export function displayEditButton(json) {
   if (loggedInEmail === listingOwner) {
     editButton.classList.replace("d-none", "d-flex")
   }
+}
+
+/**
+ * Updates a listing on the server using the specified URL.
+ *
+ * @param {string} url - The URL to use for updating the listing.
+ *
+ * @return {Promise} - A promise that resolves when the listing has been successfully updated, or rejects
+ * if there is an error.
+ */
+export async function updateListing(url) {
+  const titleValue = document.querySelector("#title").value
+  const descriptionValue = document.querySelector("#description").value
+  const updatedListing = {
+    "title": titleValue,
+    "description": descriptionValue,
+    "media": mediaArray
+  }
+  const postData = {
+    method: "put",
+    headers: {
+      "Content-type": "application/json",
+      authorization: `Bearer ${userToken}`,
+    },
+    body: JSON.stringify(updatedListing),
+  }
+  const response = await fetch(url, postData)
+  const json = await response.json()
+  if (response.ok === true) {
+    window.location.reload()
+  } else {
+    console.log(error)
+  }
+
+  console.log(response)
+  console.log(json)
 }
