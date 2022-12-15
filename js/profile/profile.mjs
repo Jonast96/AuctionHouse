@@ -93,11 +93,15 @@ function updatedAvatarFunction() {
     const updatedAvatarInput = document.querySelector(".updated_avatar_input")
     console.log(updatedAvatarInput.value)
     const newAvatar = { avatar: `${updatedAvatarInput.value}` }
-
     putUser(updateUrl, newAvatar)
+    localStorage.setItem("userAvatar", updatedAvatarInput.value)
 }
 
 const avatarButton = document.querySelector(".avatar_button")
 avatarButton.addEventListener("click", () => {
-    updatedAvatarFunction()
-})
+    updatedAvatarFunction();
+
+    setTimeout(() => {
+        window.location.reload();
+    }, 500);
+});
