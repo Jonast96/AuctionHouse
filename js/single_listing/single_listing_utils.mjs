@@ -1,5 +1,8 @@
-import { userToken } from "../utils.mjs"
-
+import {
+  userToken,
+  displayUserImage
+} from "../utils.mjs"
+displayUserImage()
 
 /**
  * Generates the HTML for a single listing, using the provided listing data.

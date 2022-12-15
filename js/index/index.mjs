@@ -2,13 +2,16 @@ import {
   logOutFunctions,
   baseUrl,
   displayCreditScore,
-  profileUrl
+  profileUrl,
+  displayUserImage
 } from "../utils.mjs";
 
 import {
   createHtml,
   createExpiringHtml
-} from "./index_utils.mjs"
+} from "./index_utils.mjs";
+
+displayUserImage()
 displayCreditScore(profileUrl)
 logOutFunctions()
 const getUrl = `${baseUrl}/api/v1/auction/listings/?_seller=true&_bids=true&_active=true&sort=created&sortOrder=desc`

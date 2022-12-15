@@ -3,7 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Auction House</title>
+    <title>Create Listing - Auction House</title>
+    <meta
+      name="description"
+      content="Auction House is a platform for buying and selling items through auctions."
+    />
+
+    <meta name="keywords" content="auction, auctions, buy, sell, items" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,6 +18,7 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body class="bg-primary create">
     <header class="header">
       <nav class="navbar navbar-expand-lg">
@@ -36,16 +43,6 @@
               >Auction house</a
             >
 
-            <div>
-              <form role="search">
-                <input
-                  class="form-control mb-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </form>
-            </div>
             <div class="not_logged_in">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -117,18 +114,20 @@
                       <li class="nav-item dropdown">
                         <a
                           class="nav-link dropdown-toggle"
-                          href="profile.html"
+                          href="/index.html"
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
                         >
                           My profile
-                          <img
-                            src="/images/hasbuuuuuuuuuulla.jpg"
-                            class="rounded-circle img-fluid"
-                            alt=""
-                            style="width: 40px"
-                          />
+                          <div class="d-inline profile_img_div">
+                            <img
+                              src="https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
+                              class="rounded-circle img-fluid"
+                              alt=""
+                              style="width: 40px"
+                            />
+                          </div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
                           <li>
@@ -137,10 +136,7 @@
                             >
                           </li>
                           <li>
-                            <a
-                              class="dropdown-item credits"
-                              href="/create_listing.html"
-                            ></a>
+                            <a class="dropdown-item credits" href="#"></a>
                           </li>
                           <li>
                             <a class="dropdown-item log_out_mobile" href="#"

@@ -1,5 +1,6 @@
 import {
-    storeUserData
+    storeUserData,
+    displayUserImage
 } from "./register_utils.mjs"
 
 import {
@@ -8,6 +9,7 @@ import {
     profileUrl
 } from "../utils.mjs"
 
+displayUserImage()
 displayCreditScore(profileUrl)
 
 logOutFunctions()

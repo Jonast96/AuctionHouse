@@ -3,7 +3,8 @@ import {
     redirectIfNotLoggedIn,
     displayCreditScore,
     baseUrl,
-    userToken
+    userToken,
+    displayUserImage
 
 } from "../utils.mjs";
 import {
@@ -11,6 +12,7 @@ import {
     displayUserData
 } from "./profile_utils.mjs";
 
+displayUserImage()
 logOutFunctions()
 redirectIfNotLoggedIn(userToken)
 

@@ -3,12 +3,13 @@ import {
     baseUrl,
     logOutFunctions,
     displayCreditScore,
-    profileUrl
+    profileUrl,
+    displayUserImage
 
 } from "../utils.mjs"
 displayCreditScore(profileUrl)
 logOutFunctions()
-
+displayUserImage()
 const emailInput = document.querySelector(".email_input")
 const passwordInput = document.querySelector(".password_input")
 const loginForm = document.querySelector(".login_form")

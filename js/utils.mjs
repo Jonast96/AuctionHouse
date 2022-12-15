@@ -75,3 +75,21 @@ export async function displayCreditScore(url) {
     }
 }
 
+
+/**
+ * If user has image in localStorage, display it on the navbar
+ */
+export function displayUserImage() {
+    const imageContainer = document.querySelector(".profile_img_div")
+    const localStorageAvatar = localStorage.getItem("userAvatar")
+    if (localStorageAvatar) {
+        imageContainer.innerHTML = `
+        <img
+        src="${localStorageAvatar}"
+        class="rounded-circle img-fluid"
+        alt=""
+        style="width: 40px;height:40px;object-fit:cover;"
+      />
+        `
+    }
+}

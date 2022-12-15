@@ -4,6 +4,7 @@ import {
     userToken,
     profileUrl,
     displayCreditScore,
+    displayUserImage
 } from "../utils.mjs";
 
 import {
@@ -11,6 +12,7 @@ import {
     populateAndDisplayImageArray,
 } from "./create_listings_utils.mjs";
 
+displayUserImage()
 logOutFunctions();
 displayCreditScore(profileUrl);
 
