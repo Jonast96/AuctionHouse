@@ -74,7 +74,10 @@ async function expiringListingCall(url) {
 expiringListingCall(expiringListing)
 
 
-
+/**
+ * Filters a list of listings by a search value
+ * @param {Array} listings - The array of listings to filter
+ */
 function searchListings(json) {
   const search = document.querySelector(".search_input");
 
@@ -92,6 +95,11 @@ function searchListings(json) {
   };
 }
 
+/**
+ * Creates filtered HTML for the given listings.
+ *
+ * @param {Array} listings - The listings to create HTML for.
+*/
 function createFilteredHtml(listings) {
   const container = document.querySelector(".auctions_container");
   container.innerHTML = "";
