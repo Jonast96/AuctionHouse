@@ -1,0 +1,99 @@
+@import "custom";
+
+.landing_page {
+  .img_container {
+    height: 400px;
+  }
+  .image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .img_container_card {
+    width: 100%;
+    height: 200px;
+  }
+
+  .info_cards {
+    min-height: 450px;
+  }
+
+  .header {
+    min-height: 100vh;
+  }
+  .expiring_img {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.index_main {
+  min-height: 100vh;
+  .deals_container {
+    min-height: 60vh;
+  }
+
+  .img_all_container {
+    width: 100%;
+    height: 150px;
+  }
+  .img_all {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.register {
+  min-height: 100vh;
+  .register_container {
+    max-height: 200px;
+  }
+  .img_container {
+    width: 100%;
+    height: 200px;
+  }
+  .img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.login {
+  .header {
+    min-height: 100vh;
+  }
+}
+
+.change_avatar {
+  cursor: pointer;
+}
+
+.create {
+  main {
+    min-height: 90vh;
+    img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+  }
+}
+
+.single_listing {
+  min-height: 90vh;
+  img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.profile {
+  .expiring_img {
+    height: 200px;
+    object-fit: cover;
+  }
+}
