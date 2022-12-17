@@ -38,7 +38,7 @@ async function getCall(url) {
   const response = await fetch(url, postData)
   const json = await response.json()
 
-  for (let i = 0; i < json.length; i++) {
+  for (let i = 0; i < 20; i++) {
     const event = new Date(json[i].endsAt);
     const options = { hour: 'numeric', minute: 'numeric' };
     const time = event.toLocaleDateString("en-us", options)

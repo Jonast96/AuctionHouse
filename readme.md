@@ -1,25 +1,22 @@
 # auction-site, Semester project 2022
 
-
 ## Overview
-Auction house is my third semester project built over five weeks. The site allows users to bid on a variety of items. The site was built using Bootstrap, and includes support for Sass stylesheets.
 
+Auction house is my third semester project built over five weeks. The site allows users to bid on a variety of items. The site was built using Bootstrap, and includes support for Sass stylesheets.
 
 ## To set up newnewauction, follow these steps:
 
 Clone the repository from GitHub:
 
-```git clone https://github.com/Jonast96/new_auction_site.git```
+`git clone https://github.com/Jonast96/new_auction_site.git`
 
 Install the project dependencies:
 
 ```
-Copy code
 - npm i -y
 - npm run build
 - npm run compile:sass
 ```
-
 
 ### Dependencies
 
@@ -38,6 +35,7 @@ Copy code
 - sass: ^1.56.1
 
 ### Scripts
+
 - compile:sass: Compiles Sass stylesheets
 
 - watch: Watches for changes to Sass files and recompiles on changes
