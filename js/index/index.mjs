@@ -112,3 +112,13 @@ function createFilteredHtml(listings) {
   });
 }
 
+const addListingButton = document.querySelector(".add_listing_button")
+const userToken = localStorage.getItem("userToken")
+
+addListingButton.addEventListener("click",()=> {
+  if (userToken) {
+    window.location.href="create_listing.html"
+  } else {
+    window.location.href="login.html"
+  }
+})
