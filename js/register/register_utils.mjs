@@ -9,7 +9,6 @@ const name = document.getElementById("name")
 const email = document.getElementById("email")
 const password = document.getElementById("password")
 const avatar = document.getElementById("avatar")
-const banner = document.getElementById("banner")
 
 const successBorder = document.querySelector(".card")
 const loginButton = document.querySelector(".login_button")
@@ -120,8 +119,8 @@ export function storeUserData() {
         email: `${email.value.toLowerCase()}`,
         password: `${password.value}`,
         avatar: `${avatar.value}`,
-        banner: `${banner.value}`
     }
+
 
     if (passwordIsSameAsRepeatPassword() && emailIsValid()) {
         registerUser(registerUrl, userToRegister)
