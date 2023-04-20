@@ -1,6 +1,5 @@
 import {
     storeUserData,
-    displayUserImage
 } from "./register_utils.mjs"
 
 import {
