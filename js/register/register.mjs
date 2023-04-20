@@ -8,7 +8,6 @@ import {
     profileUrl
 } from "../utils.mjs"
 
-displayUserImage()
 displayCreditScore(profileUrl)
 
 logOutFunctions()
